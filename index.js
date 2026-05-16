@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const authRoutes = require("./routes/authRoutes");
+const postsRoutes = require("./routes/postsRoutes");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
@@ -11,6 +12,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cookieParser());
 
+
 app.use(cors({
   origin: "*"
 }));
@@ -18,6 +20,7 @@ app.use(cors({
 
 // Use the auth routes
 app.use("/auth", authRoutes);
+app.use("/posts", postsRoutes);
 
 
 

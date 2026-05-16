@@ -55,7 +55,7 @@ async function login(res, email, password) {
     }
 
     // ↓ use foundUser — not user
-    const token = generateToken({ id: foundUser.id, email: foundUser.email });
+    const token = generateToken({ id: foundUser.id, email: foundUser.email , fullName: foundUser.fullName });
 
     res.cookie("token", token, {
         httpOnly: true,
