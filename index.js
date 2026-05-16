@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 
 const PORT = 3000;
