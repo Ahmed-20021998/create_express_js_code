@@ -10,6 +10,11 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cookieParser());
 
+app.use(cors({
+  origin: "*"
+}));
+
+
 // Use the auth routes
 app.use("/auth", authRoutes);
 
