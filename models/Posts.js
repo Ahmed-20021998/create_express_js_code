@@ -52,6 +52,18 @@ class Posts {
         postsDB.splice(postIndex, 1);
         return { success: true, message: "Post deleted successfully" };
     }
+
+    static likePost(id) {
+        const post = postsDB.find(p => p.id === parseInt(id));
+
+        if (!post) {
+            return { success: false, message: "Post not found" };
+        }
+
+        post.likes += 1;
+
+        return { success: true, message: "Post liked", likes: post.likes };
+    }
 }
 
 module.exports = Posts;

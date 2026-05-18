@@ -33,4 +33,10 @@ router.delete("/post/:id", authMiddleware, (req, res) => {
     res.status(result.success ? 200 : result.status).json(result);
 });
 
+router.post("/post/:id/like", (req, res) => {
+    const post = new Posts();
+    const result = Posts.likePost(req.params.id);
+    res.status(result.success ? 200 : 404).json(result);
+});
+
 module.exports = router;
