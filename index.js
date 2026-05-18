@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const authRoutes = require("./routes/authRoutes");
 const postsRoutes = require("./routes/postsRoutes");
+const commentRoutes = require("./routes/commentRoutes");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
@@ -21,6 +22,7 @@ app.use(cors({
 // Use the auth routes
 app.use("/auth", authRoutes);
 app.use("/posts", postsRoutes);
+app.use("/comments", commentRoutes);
 
 
 
