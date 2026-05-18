@@ -32,14 +32,15 @@ class Posts {
         return post || { success: false, message: "Post not found" };
     }
 
-    updatePost(id, newContent, newLikes) {
+    updatePost(id, newContent, userEmail) {
         const post = postsDB.find(p => p.id === id);
         if (!post) {
             return { success: false, message: "Post not found" };
         }
-        
+        if (post.authorEmail !== userEmail) {
+            return { success: false, message: "Unauthorized to update this post" };
+        }
         post.content = newContent;
-        post.likes = newLikes;
         return { success: true, message: "Post updated successfully" };
     }
 

@@ -21,9 +21,10 @@ router.get("/post/:id", (req, res) => {
 });
 
 router.put("/post/:id", authMiddleware, (req, res) => {
-    const { newcontent, newlikes } = req.body;
+    const { newcontent } = req.body;
     const post = new Posts();
-    res.status(200).json({ message: post.updatePost(parseInt(req.params.id), newcontent, newlikes) });
+    const result = post.updatePost(parseInt(req.params.id), newcontent, req.user.email);
+    res.status(result.success ? 200 : 403).json(result);
 });
 
 router.delete("/post/:id", authMiddleware, (req, res) => {
