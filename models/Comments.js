@@ -1,13 +1,12 @@
 const { db, saveDB, nextId } = require("../DB/db");
 
 class Comments {
-    constructor(postId, content, createdBy, createdByEmail) {
+    constructor(postId, content, createdBy) {
         this.postId = Number(postId);
         this.content = content;
         this.createdAt = new Date();
         this.updatedAt = new Date();
         this.createdBy = createdBy;
-        this.createdByEmail = createdByEmail;
     }
 
     createComment() {
@@ -22,7 +21,7 @@ class Comments {
         }
 
         const user = users.find(
-            user => user.fullName === this.createdBy
+            user => user.id === this.createdBy
         );
 
         if (!user) {
