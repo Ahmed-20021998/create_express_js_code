@@ -1,72 +1,11 @@
 {
   "users": [
-    {
-      "id": 1,
-      "fullName": "Ahmed Taha Hanay",
-      "email": "ataha.hanafye@example.com",
-      "password": "$2b$10$WVy/RUqomWy8mxN8CSCUveBjwOWbe47j/fu8cKTS8JTSvFSn71eHG"
-    },
-    {
-      "id": 2,
-      "fullName": "Mostafa essam",
-      "email": "essam@example.com",
-      "password": "$2b$10$/n6DWLOwQnq/ZA..jsgjfePP4IoPx3C5BeUpN/Ws5/L2cyOJzCtRO"
-    }
+    
   ],
   "posts": [
-    {
-      "id": 1,
-      "content": "Today is Best day",
-      "author": "Ahmed Taha Hanay",
-      "authorEmail": "ataha.hanafye@example.com",
-      "createdAt": "2026-05-22T15:20:31.220Z",
-      "likes": 2
-    },
-    {
-      "id": 2,
-      "content": "Programming is the best thing ever right?",
-      "author": "Mostafa essam",
-      "authorEmail": "essam@example.com",
-      "createdAt": "2026-05-22T15:28:42.871Z",
-      "likes": 2
-    }
+    
   ],
   "comments": [
-    {
-      "id": 1,
-      "postId": 1,
-      "content": "dedd",
-      "createdAt": "2026-05-22T15:26:23.570Z",
-      "updatedAt": "2026-05-22T15:26:23.570Z",
-      "createdBy": "ataha.hanafye@example.com",
-      "createdByName": "Ahmed Taha Hanay"
-    },
-    {
-      "id": 2,
-      "postId": 1,
-      "content": "okay",
-      "createdAt": "2026-05-22T15:27:42.362Z",
-      "updatedAt": "2026-05-22T15:27:42.362Z",
-      "createdBy": "Mostafa essam",
-      "createdByName": "Mostafa essam"
-    },
-    {
-      "id": 3,
-      "postId": 2,
-      "content": "I agree with you",
-      "createdAt": "2026-05-22T15:29:46.245Z",
-      "updatedAt": "2026-05-22T15:29:46.245Z",
-      "createdBy": "Ahmed Taha Hanay",
-      "createdByName": "Ahmed Taha Hanay"
-    },
-    {
-      "id": 4,
-      "postId": 2,
-      "content": "right",
-      "createdAt": "2026-05-22T15:30:23.542Z",
-      "updatedAt": "2026-05-22T15:30:23.542Z",
-      "createdBy": "Mostafa essam",
-      "createdByName": "Mostafa essam"
-    }
+    
   ]
 }
