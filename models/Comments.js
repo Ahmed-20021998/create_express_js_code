@@ -12,7 +12,7 @@ class Comments {
     createComment() {
         if (!this.content) throw new Error("Comment content is required");
 
-        const post = posts.find(
+        const post = db.posts.find(
             post => post.id === this.postId
         );
 
@@ -20,7 +20,7 @@ class Comments {
             throw new Error("Post not found");
         }
 
-        const user = users.find(
+        const user = db.users.find(
             user => user.id === this.createdBy
         );
 

@@ -1,1 +1,46 @@
-{"users":[],"posts":[],"comments":[]}
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Mostafa Essam",
+      "email": "essam@example.com",
+      "password": "$2b$10$8VAwaOLWr4NqVRUsKhpBDOsxpj9GaeYsuCTVj9PC02RWX2dBJRDLG"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "content": "this is my first post 2",
+      "author": "Mostafa Essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-22T13:53:14.023Z",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "content": "this is my first post 2",
+      "author": "Mostafa Essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-22T13:54:47.812Z",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "content": "this is my first post 2",
+      "author": "Mostafa Essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-22T14:01:15.138Z",
+      "likes": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "content": "Woow !!!!",
+      "createdAt": "2026-05-22T14:20:43.180Z",
+      "updatedAt": "2026-05-22T14:20:43.180Z",
+      "createdBy": 1
+    }
+  ]
+}
