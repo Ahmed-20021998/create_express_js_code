@@ -12,10 +12,14 @@ const fs = require("fs");
 
 const PORT = 3000;
 
-// Auto-create uploads/ folder locally (on Vercel this is skipped gracefully)
+// Auto-create uploads/ folder locally — safely ignored on Vercel (read-only fs)
 const uploadsDir = path.join(__dirname, "uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
+try {
+  if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+  }
+} catch (e) {
+  // Vercel has a read-only filesystem, safe to ignore
 }
 
 // middleware
