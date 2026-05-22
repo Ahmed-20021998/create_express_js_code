@@ -26,7 +26,7 @@ class Comments {
         }
 
         const user = users.find(
-            user => user.fullName === this.createdBy
+            user => user.id === this.createdBy
         );
 
         if (!user) {
