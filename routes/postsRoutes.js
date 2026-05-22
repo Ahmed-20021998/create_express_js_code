@@ -21,9 +21,16 @@ router.get("/post/:id", (req, res) => {
 });
 
 router.put("/post/:id", authMiddleware, (req, res) => {
-    const { newcontent } = req.body;
+    const { newContent } = req.body;
+
     const post = new Posts();
-    const result = post.updatePost(parseInt(req.params.id), newcontent, req.user.email);
+
+    const result = post.updatePost(
+        parseInt(req.params.id),
+        newContent,
+        req.user.email
+    );
+
     res.status(result.success ? 200 : 403).json(result);
 });
 
@@ -34,8 +41,9 @@ router.delete("/post/:id", authMiddleware, (req, res) => {
 });
 
 router.post("/post/:id/like", (req, res) => {
-    const post = new Posts();
+
     const result = Posts.likePost(req.params.id);
+
     res.status(result.success ? 200 : 404).json(result);
 });
 

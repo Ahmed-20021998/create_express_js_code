@@ -58,12 +58,25 @@ class Posts {
     }
 
     static likePost(id) {
-        const post = db.posts.find(p => p.id === parseInt(id));
-        if (!post) return { success: false, message: "Post not found" };
-        post.likes += 1;
-        saveDB(db); // FIX #1: persist likes
-        return { success: true, message: "Post liked", likes: post.likes };
+    const post = db.posts.find(p => p.id === parseInt(id));
+
+    if (!post) {
+        return {
+            success: false,
+            message: "Post not found"
+        };
     }
+
+    post.likes += 1;
+
+    saveDB(db);
+
+    return {
+        success: true,
+        message: "Post liked",
+        likes: post.likes
+    };
+}
 }
 
 module.exports = Posts;

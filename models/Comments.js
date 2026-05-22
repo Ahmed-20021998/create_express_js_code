@@ -10,10 +10,12 @@ class Comments {
     }
 
     createComment() {
-        if (!this.content) throw new Error("Comment content is required");
+        if (!this.content) {
+            throw new Error("Comment content is required");
+        }
 
         const post = db.posts.find(
-            post => post.id === this.postId
+            post => post.id === Number(this.postId)
         );
 
         if (!post) {
@@ -21,7 +23,7 @@ class Comments {
         }
 
         const user = db.users.find(
-            user => user.id === this.createdBy
+            u => u.fullName === this.createdBy
         );
 
         if (!user) {
@@ -29,16 +31,18 @@ class Comments {
         }
 
         const newComment = {
-            id: nextId(db.comments), // FIX #2: safe ID
-            postId: this.postId,
+            id: nextId(db.comments),
+            postId: Number(this.postId),
             content: this.content,
             createdAt: this.createdAt,
             updatedAt: this.updatedAt,
-            createdBy: this.createdBy
+            createdBy: this.createdBy,
+            createdByName: user.fullName
         };
 
         db.comments.push(newComment);
-        saveDB(db); // FIX #1: persist
+        saveDB(db);
+
         return newComment;
     }
 

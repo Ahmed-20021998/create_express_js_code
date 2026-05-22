@@ -9,7 +9,7 @@ router.post("/comment/:postId", authMiddleware, (req, res) => {
         const { postId } = req.params;
         const { content } = req.body;
 
-        const createdBy = req.user.id;
+        const createdBy = req.user.fullName;
 
         const comment = new Comments(postId, content, createdBy);
         const newComment = comment.createComment();
