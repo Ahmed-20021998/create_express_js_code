@@ -49,6 +49,26 @@
       "likes": 1,
       "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/video/upload/v1779475538/commune/dfihsd0a4gdm1qgjo8ub.mp4",
       "mediaType": "video"
+    },
+    {
+      "id": 5,
+      "content": "new collection",
+      "author": "Ahmed Taha Hanay",
+      "authorEmail": "ataha.hanafye@example.com",
+      "createdAt": "2026-05-22T19:19:25.334Z",
+      "likes": 1,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779477565/commune/u0osbw2jmjsiwws2e1p3.png",
+      "mediaType": "image"
+    },
+    {
+      "id": 6,
+      "content": "I love cats (=",
+      "author": "Mostafa essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-22T19:21:59.377Z",
+      "likes": 1,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779477719/commune/py2fe4cqknoagz3rtymu.jpg",
+      "mediaType": "image"
     }
   ],
   "comments": [
@@ -103,6 +123,33 @@
       "content": "woow",
       "createdAt": "2026-05-22T18:47:17.311Z",
       "updatedAt": "2026-05-22T18:47:17.311Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 7,
+      "postId": 5,
+      "content": "how much is that",
+      "createdAt": "2026-05-22T19:21:13.924Z",
+      "updatedAt": "2026-05-22T19:21:13.924Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 8,
+      "postId": 6,
+      "content": "Do you agree with me",
+      "createdAt": "2026-05-22T19:23:06.677Z",
+      "updatedAt": "2026-05-22T19:23:06.677Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 9,
+      "postId": 6,
+      "content": "MEE TOO",
+      "createdAt": "2026-05-22T19:24:00.157Z",
+      "updatedAt": "2026-05-22T19:24:00.157Z",
       "createdBy": "Ahmed Taha Hanay",
       "createdByName": "Ahmed Taha Hanay"
     }
