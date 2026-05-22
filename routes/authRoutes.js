@@ -2,34 +2,30 @@ const express = require("express");
 const Users = require("../models/User.js");
 const authMiddleware = require("../middleware/auth.middleware");
 
-
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-    // Code to handle user registration
     const { fullName, email, password } = req.body;
     const user = new Users(fullName, email, password);
     res.send(await user.register());
 });
 
 router.post("/login", async (req, res) => {
-    // Code to handle user login
     const { email, password } = req.body;
     const user = new Users("", email, password);
-    res.send(await user.login(res));
+    await user.login(res); // FIX #6: was res.send(await ...) which double-sends
 });
 
 router.post("/logout", (req, res) => {
-    // Code to handle user logout
+    // FIX #6: logout is synchronous — just call it directly
     const user = new Users();
-    res.send(user.logout(res));
+    user.logout(res);
 });
 
-router.get("/getUsers", authMiddleware, async (req, res) => {
+// FIX #3: remove authMiddleware so logged-out users can see member count
+router.get("/getusers", async (req, res) => {
     const user = new Users();
-
     const users = await user.getAllUsers();
-
     res.send(users);
 });
 

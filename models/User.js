@@ -1,11 +1,8 @@
-const usersDB = require("../DB/user.db");
 const { hashPassword, comparePassword } = require("../utils/hash");
 const { generateToken } = require("../utils/auth");
-const {register , login , logout , getAllUsers} = require("../controller/auth_controller");
-
+const { register, login, logout, getAllUsers } = require("../controller/auth_controller");
 
 class Users {
-
     constructor(fullName, email, password) {
         this.fullName = fullName;
         this.email = email;
@@ -16,13 +13,12 @@ class Users {
         return await register(this.fullName, this.email, this.password);
     }
 
-    // ↓ res is passed as parameter so we can set cookie here
     async login(res) {
-        return await login(res,this.email, this.password);
+        return await login(res, this.email, this.password);
     }
 
-    async logout(res) {
-        return await logout(res);
+    logout(res) {
+        return logout(res); // FIX #6: logout is sync, no need for async
     }
 
     getAllUsers() {

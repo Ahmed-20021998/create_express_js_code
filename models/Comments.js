@@ -1,21 +1,17 @@
-const comments = require("../DB/comments.db");
-const posts = require("../DB/posts.db");
-const users = require("../DB/user.db");
+const { db, saveDB, nextId } = require("../DB/db");
 
 class Comments {
-    constructor(postId, content, createdBy) {
+    constructor(postId, content, createdBy, createdByEmail) {
         this.postId = Number(postId);
         this.content = content;
         this.createdAt = new Date();
         this.updatedAt = new Date();
         this.createdBy = createdBy;
+        this.createdByEmail = createdByEmail;
     }
 
     createComment() {
-
-        if (!this.content) {
-            throw new Error("Comment content is required");
-        }
+        if (!this.content) throw new Error("Comment content is required");
 
         const post = posts.find(
             post => post.id === this.postId
@@ -26,7 +22,7 @@ class Comments {
         }
 
         const user = users.find(
-            user => user.id === this.createdBy
+            user => user.fullName === this.createdBy
         );
 
         if (!user) {
@@ -34,7 +30,7 @@ class Comments {
         }
 
         const newComment = {
-            id: comments.length + 1,
+            id: nextId(db.comments), // FIX #2: safe ID
             postId: this.postId,
             content: this.content,
             createdAt: this.createdAt,
@@ -42,19 +38,14 @@ class Comments {
             createdBy: this.createdBy
         };
 
-        comments.push(newComment);
-
+        db.comments.push(newComment);
+        saveDB(db); // FIX #1: persist
         return newComment;
     }
 
     getCommentsByPostId(postId) {
-        const postComments = comments.filter(
-            comment => comment.postId === Number(postId)
-        );
-        return postComments;
+        return db.comments.filter(c => c.postId === Number(postId));
     }
-
-
 }
 
 module.exports = Comments;
