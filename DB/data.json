@@ -11,6 +11,12 @@
       "fullName": "Mostafa essam",
       "email": "essam@example.com",
       "password": "$2b$10$IQG5GjshK35AGb8PlyQL8un6mVZeqqzzg5QVbheYsLulFRHR0onxS"
+    },
+    {
+      "id": 3,
+      "fullName": "Samir Yousri",
+      "email": "samir@gmail.com",
+      "password": "$2b$10$aiYtwvhzK5FallFXzxuUiumrDiqZCDG6kFAdc9zfvpfBFzWnIaqwi"
     }
   ],
   "posts": [
@@ -69,6 +75,75 @@
       "likes": 1,
       "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779477719/commune/py2fe4cqknoagz3rtymu.jpg",
       "mediaType": "image"
+    },
+    {
+      "id": 7,
+      "content": "Programming is very Interesting",
+      "author": "Ahmed Taha Hanay",
+      "authorEmail": "ataha.hanafye@example.com",
+      "createdAt": "2026-05-23T09:43:17.424Z",
+      "likes": 1,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/video/upload/v1779529395/commune/po4hxwroxwa3hqbrv2ks.mp4",
+      "mediaType": "video"
+    },
+    {
+      "id": 8,
+      "content": "New collection for smart wantch !!!",
+      "author": "Ahmed Taha Hanay",
+      "authorEmail": "ataha.hanafye@example.com",
+      "createdAt": "2026-05-23T11:39:53.769Z",
+      "likes": 2,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779536393/commune/f91inaqmpfa7oznrldsq.png",
+      "mediaType": "image"
+    },
+    {
+      "id": 9,
+      "content": "marsa matrouh the bride of North cost!!",
+      "author": "Mostafa essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-23T12:26:29.295Z",
+      "likes": 3,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/video/upload/v1779539188/commune/vtrkp0juw967campjrp9.mp4",
+      "mediaType": "video"
+    },
+    {
+      "id": 10,
+      "content": "How can I write print in python ?!!!",
+      "author": "Samir Yousri",
+      "authorEmail": "samir@gmail.com",
+      "createdAt": "2026-05-23T12:29:11.673Z",
+      "likes": 2,
+      "mediaUrl": null,
+      "mediaType": null
+    },
+    {
+      "id": 11,
+      "content": "What do you know about AI",
+      "author": "Samir Yousri",
+      "authorEmail": "samir@gmail.com",
+      "createdAt": "2026-05-23T12:35:48.564Z",
+      "likes": 3,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779539748/commune/zp4f5ujvm1au96rcqjyg.png",
+      "mediaType": "image"
+    },
+    {
+      "id": 12,
+      "content": "DO YOU KNOW COOKING !!!",
+      "author": "Mostafa essam",
+      "authorEmail": "essam@example.com",
+      "createdAt": "2026-05-23T13:41:15.408Z",
+      "likes": 1,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/image/upload/v1779543674/commune/m12m8qzjm5inljbhrluu.jpg",
+      "mediaType": "image"
+    },
+    {
+      "id": 13,
+      "author": "Samir Yousri",
+      "authorEmail": "samir@gmail.com",
+      "createdAt": "2026-05-23T13:45:41.539Z",
+      "likes": 1,
+      "mediaUrl": "https://res.cloudinary.com/dqqtsjpi1/video/upload/v1779543940/commune/m4lf7x4j3sbs3qa0wdns.mp4",
+      "mediaType": "video"
     }
   ],
   "comments": [
@@ -150,6 +225,132 @@
       "content": "MEE TOO",
       "createdAt": "2026-05-22T19:24:00.157Z",
       "updatedAt": "2026-05-22T19:24:00.157Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 10,
+      "postId": 7,
+      "content": "how can I learn fast",
+      "createdAt": "2026-05-23T09:44:06.828Z",
+      "updatedAt": "2026-05-23T09:44:06.828Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 11,
+      "postId": 6,
+      "content": "okay",
+      "createdAt": "2026-05-23T10:50:35.175Z",
+      "updatedAt": "2026-05-23T10:50:35.175Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 12,
+      "postId": 8,
+      "content": "if you want this watch sent me on private",
+      "createdAt": "2026-05-23T11:40:30.418Z",
+      "updatedAt": "2026-05-23T11:40:30.418Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 13,
+      "postId": 8,
+      "content": "okay",
+      "createdAt": "2026-05-23T12:20:11.955Z",
+      "updatedAt": "2026-05-23T12:20:11.955Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 14,
+      "postId": 6,
+      "content": "like it",
+      "createdAt": "2026-05-23T12:24:24.196Z",
+      "updatedAt": "2026-05-23T12:24:24.196Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 15,
+      "postId": 9,
+      "content": "woow I like it",
+      "createdAt": "2026-05-23T12:28:33.798Z",
+      "updatedAt": "2026-05-23T12:28:33.798Z",
+      "createdBy": "Samir Yousri",
+      "createdByName": "Samir Yousri"
+    },
+    {
+      "id": 16,
+      "postId": 10,
+      "content": "print(\"Hello, World\")",
+      "createdAt": "2026-05-23T12:30:03.816Z",
+      "updatedAt": "2026-05-23T12:30:03.816Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 17,
+      "postId": 10,
+      "content": "print(\"Hello, World\" , endl = true) if you want disallow new line",
+      "createdAt": "2026-05-23T12:31:51.060Z",
+      "updatedAt": "2026-05-23T12:31:51.060Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 18,
+      "postId": 11,
+      "content": "AI is to make machine act like humans .. how can make them see like human using CV and how to think like human using Machine learning and how to make them speak like human using speak recognition and so on",
+      "createdAt": "2026-05-23T13:05:07.247Z",
+      "updatedAt": "2026-05-23T13:05:07.247Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 19,
+      "postId": 11,
+      "content": "so that is good",
+      "createdAt": "2026-05-23T13:39:37.541Z",
+      "updatedAt": "2026-05-23T13:39:37.541Z",
+      "createdBy": "Ahmed Taha Hanay",
+      "createdByName": "Ahmed Taha Hanay"
+    },
+    {
+      "id": 20,
+      "postId": 11,
+      "content": "ahmed is right",
+      "createdAt": "2026-05-23T13:40:02.063Z",
+      "updatedAt": "2026-05-23T13:40:02.063Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 21,
+      "postId": 9,
+      "content": "I like it so much",
+      "createdAt": "2026-05-23T13:40:23.066Z",
+      "updatedAt": "2026-05-23T13:40:23.066Z",
+      "createdBy": "Mostafa essam",
+      "createdByName": "Mostafa essam"
+    },
+    {
+      "id": 22,
+      "postId": 12,
+      "content": "Yes me I know do tea 😂",
+      "createdAt": "2026-05-23T13:43:51.809Z",
+      "updatedAt": "2026-05-23T13:43:51.809Z",
+      "createdBy": "Samir Yousri",
+      "createdByName": "Samir Yousri"
+    },
+    {
+      "id": 23,
+      "postId": 13,
+      "content": "I like this 🥰🥰🥰",
+      "createdAt": "2026-05-23T13:47:35.567Z",
+      "updatedAt": "2026-05-23T13:47:35.567Z",
       "createdBy": "Ahmed Taha Hanay",
       "createdByName": "Ahmed Taha Hanay"
     }
